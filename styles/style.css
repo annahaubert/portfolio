@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap'); /* alt z quebra a linha e para achar as fontes se usa o google fonts*/
+
+
+:root {
+    --cor-primaria: #F2BED1; /* background. paleta rosa -> https://colorhunt.co/palette/f9f5f6f8e8eefdcedff2bed1 */
+    --cor-secundaria: #F9F5F6;
+    --cor-terciaria: #F8E8EE;
+    --cor-botao: #FDCEDF;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    /*  height: 100vh; importante colocar em todos projetos */
+    box-sizing: border-box; /* elemento fica dentro da tela*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%; /* preenchimento superior, direito, inferior e esquerdo */
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.tituloDestaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex; /* contexto flexivel pra todos os filhos */
+    /* flex-box tem um site com varias coisas, https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size:1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px; /* distancia entr os botoes */
+
+}
+
+.apresentacao__links__subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+
+}
+
+.apresentacao__links_link /* trocaram o nome pra navegacao*/ {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* espaço entre o icone e o texto */
+   /* background-color: #22D4FD; ctrl k + c pra comentar automaticamente */
+    border: 2px solid var(--cor-terciaria); /* tamanho do contorno */
+    width: 378px; 
+    text-align: center;
+    border-radius: 8px; /* voltinha da borda */ 
+    font-size: 1.5rem;
+    padding: 21.5px 0; /* borda do insta e linkedin. pra ver no figma a borda clica no conteudo e aperta alt. o 21.5px e o 0 signfica os eixos vertical e horizontal respectivamente*/
+    text-decoration: none; /* tava sublihado antes o botao */
+    color: var(--cor-secundaria);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.apresentacao__links_link:hover {
+    /* background-color: #e3aad7 */
+    background-color: var(--cor-botao);
+}
+
+.apresentacao__imagem {
+    width: 50%
+}
+
+.rodape {
+    width: 100vw;
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    
+}
+
+.apresentacao__conteudo__texto a{
+    text-decoration: none;
+    color:var(--cor-terciaria);
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
